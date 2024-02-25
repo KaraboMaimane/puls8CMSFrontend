@@ -1,0 +1,10 @@
+<div class="succcontainer" *ngIf="isSuccess">
+  <button class="alertbutton" (click)="cancelModal()">Okay</button>
+</div>
+
+<div class="loadcontainer" *ngIf="isLoading">
+</div>
+
+<div class="failcontainer" *ngIf="isFailure">
+  <button class="alertbutton" (click)="cancelModal()">Okay</button>
+</div>
