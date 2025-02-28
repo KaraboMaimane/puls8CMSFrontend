@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
+// import { NgForm } from '@angular/forms';
 // import { DatabaseService } from '../database.service';
 import { Router } from '@angular/router';
-// import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-login',
@@ -27,21 +26,22 @@ export class LoginComponent implements OnInit {
     this.message = '';
   }
 
-  login(form: NgForm) {
-    if (form.valid) {
-      this.loader = 'true';
-      // this.database.login(form.value.email, form.value.password).then((data) => {
-      //   this.loader = 'false';
-      //   this.logsucc = 'true';
-      //
-      // }).catch((error) => {
-      //   this.loader = 'false';
-      //   this.logfail = 'true';
-      //   this.message = error.message;
-      // });
-    } else {
-      this.logwarn = 'true';
-    }
+  // login(form: NgForm) {
+  login() {
+    // if (form.valid) {
+    //   this.loader = 'true';
+    //   // this.database.login(form.value.email, form.value.password).then((data) => {
+    //   //   this.loader = 'false';
+    //   //   this.logsucc = 'true';
+    //   //
+    //   // }).catch((error) => {
+    //   //   this.loader = 'false';
+    //   //   this.logfail = 'true';
+    //   //   this.message = error.message;
+    //   // });
+    // } else {
+    //   this.logwarn = 'true';
+    // }
 
   }
 
@@ -49,12 +49,12 @@ export class LoginComponent implements OnInit {
   }
 
   cancelModal() {
-    this.router.navigate(["home"]);
-    this.logsucc = 'false';
+    // this.router.navigate(["home"]);
+    // this.logsucc = 'false';
   }
 
   nextpage(page: string){
-    this.router.navigate([page]);
+    // this.router.navigate([page]);
   }
 
 }
