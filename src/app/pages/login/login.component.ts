@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 // import { NgForm } from '@angular/forms';
 // import { DatabaseService } from '../database.service';
-import { Router } from '@angular/router';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -9,13 +9,15 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-  logfail: string = 'false';
-  logsucc: string = 'false';
-  logwarn: string = 'false';
-  loader: string = 'false';
-  message: string = '';
-  reset: string;
-  constructor(private router: Router) { }
+  logfail = 'false';
+  logsucc = 'false';
+  logwarn = 'false';
+  loader = 'false';
+  message = '';
+  reset;
+
+  constructor(private router: Router) {
+  }
 
   ngOnInit() {
     this.logfail = 'false';
@@ -53,7 +55,7 @@ export class LoginComponent implements OnInit {
     // this.logsucc = 'false';
   }
 
-  nextpage(page: string){
+  nextpage(page: string) {
     // this.router.navigate([page]);
   }
 

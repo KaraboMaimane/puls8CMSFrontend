@@ -2,20 +2,21 @@
 
   <div class="border">
 
-    <form  class="formbox">
-      <img class="image" src="../../assets/sound-wavesdard.png" alt="">
+    <form class="formbox">
+      <img alt="" class="image" src="../../assets/sound-wavesdard.png">
       <h1 class="heading">Login</h1>
-      <input name="email" required type="email"  class="input" placeholder="Email">
+      <input class="input" name="email" placeholder="Email" required type="email">
       <!--      TODO: Email validation -->
 
-<!--      <p  class="err">Email Cannot Be Empty!</p>-->
-      <input name="password"  required type="password" class="input" placeholder="Password">
-<!--      TODO: Password validation -->
-<!--      <p  class="err">Password Cannot Be Empty!</p>-->
-      <input type="submit" value="login" class="button">
+      <!--      <p  class="err">Email Cannot Be Empty!</p>-->
+      <input class="input" name="password" placeholder="Password" required type="password">
+      <!--      TODO: Password validation -->
+      <!--      <p  class="err">Password Cannot Be Empty!</p>-->
+      <input class="button" type="submit" value="login">
 
       <a class="link">
-        <span class="link hov" (click)="nextpage('register')">Create An Account</span> or <span class="hov" (click)="resetpassword()">Forgot Password</span>
+        <span (click)="nextpage('register')" class="link hov">Create An Account</span> or <span (click)="resetpassword()"
+                                                                                                class="hov">Forgot Password</span>
       </a>
 
       <!-- <a class="link" >Forgot Password?</a> -->
@@ -24,32 +25,32 @@
   </div>
 
 
- <div class="warncontainer" *ngIf="logwarn == 'true'">
-    <div class="alertbox" (click)="logwarn = 'false'">
-      <img src="../../assets/thinking.svg" alt="" class="alertimg">
+  <div *ngIf="logwarn == 'true'" class="warncontainer">
+    <div (click)="logwarn = 'false'" class="alertbox">
+      <img alt="" class="alertimg" src="../../assets/thinking.svg">
       <div class="messagebox">
         <p class="alertmessagehead">Whoa, Hey There...</p>
         <p class="alertmessage">Your Data Has To Be Valid Before We Let You In</p>
-        <button class="alertbutton" (click)="logwarn = 'false'">Okay</button>
+        <button (click)="logwarn = 'false'" class="alertbutton">Okay</button>
       </div>
     </div>
   </div>
 
 
-  <div class="succcontainer" *ngIf="logsucc == 'true'">
+  <div *ngIf="logsucc == 'true'" class="succcontainer">
     <div class="alertbox">
-      <img src="../../assets/happy.svg" alt="" class="alertimg">
+      <img alt="" class="alertimg" src="../../assets/happy.svg">
       <div class="messagebox">
         <p class="alertmessagehead">Yesss!</p>
         <p class="alertmessage">You Have Successfully Logged In</p>
-        <button class="alertbutton" (click)="cancelModal()">Okay</button>
+        <button (click)="cancelModal()" class="alertbutton">Okay</button>
       </div>
     </div>
   </div>
 
-    <div class="loadcontainer" *ngIf="loader == 'true'">
+  <div *ngIf="loader == 'true'" class="loadcontainer">
     <div class="loadingmod">
-      <img src="../../assets/sound-wavesdard.png" alt="" class="icon">
+      <img alt="" class="icon" src="../../assets/sound-wavesdard.png">
       <p class="message">Loggin In
         <span>.</span>
         <span>.</span>
@@ -58,13 +59,13 @@
     </div>
   </div>
 
-  <div class="failcontainer" *ngIf="logfail == 'true'">
-    <div class="alertbox" (click)="logfail = 'false'">
-      <img src="../../assets/sad.svg" alt="" class="alertimg">
+  <div *ngIf="logfail == 'true'" class="failcontainer">
+    <div (click)="logfail = 'false'" class="alertbox">
+      <img alt="" class="alertimg" src="../../assets/sad.svg">
       <div class="messagebox">
         <p class="alertmessagehead">Oh Boy!</p>
-        <p class="alertmessage">We Can't Let You In... Yet. {{message}}</p>
-        <button class="alertbutton" (click)="logfail = 'false';">Okay</button>
+        <p class="alertmessage">We Can't Let You In... Yet. {{ message }}</p>
+        <button (click)="logfail = 'false';" class="alertbutton">Okay</button>
       </div>
     </div>
   </div>
